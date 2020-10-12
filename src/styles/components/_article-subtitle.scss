@@ -1,0 +1,18 @@
+.zoom-article-subtitle {
+  color: $light-grey;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.33;
+  margin: 8px 0 0;
+  max-height: 100%;
+  text-transform: none;
+
+  @include for-desktop-up {
+    margin: 16px 0 0;
+    max-height: 46px;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,65 @@
+.zoom-article-item {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    flex-flow: column nowrap;
+    width: auto;
+    height: 230px;
+    overflow: hidden;
+    user-select: none;
+    max-width: 320px;
+    transition: border-color 0.35s ease-in;
+
+    @include for-desktop-up {
+      flex-flow: row nowrap;
+      width: auto;
+      height: 168px;
+      max-width: 48%;
+    }
+  }
+
+  &__wrapper:first-child {
+    @include for-desktop-up {
+      min-width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 400px;
+    }
+  }
+
+  &__position {
+    flex-flow: column nowrap;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #ecf0f1;
+    background-color: #ffffff;
+    margin: 0 20px 40px;
+
+    @include for-desktop-up {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+    font-size: 14px;
+    height: calc(100% - 122px);
+    overflow: hidden;
+
+    @include for-desktop-up {
+      margin: 0;
+      padding: 40px 50px;
+      align-self: center;
+      height: auto;
+      overflow: hidden;
+      font-size: 14px;
+    }
+  }
+}

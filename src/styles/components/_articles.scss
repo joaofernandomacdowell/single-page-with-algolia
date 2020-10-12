@@ -1,0 +1,94 @@
+// SearchBox
+.ais-SearchBox-input {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #fff;
+  border: none;
+  border-radius: 24px;
+  color: #333;
+  height: 48px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.ais-SearchBox-submit {
+  display: none;
+}
+
+.ais-SearchBox-submitIcon {
+  width: 18px;
+  height: 18px;
+  fill: $white-gray;
+}
+
+.ais-SearchBox-reset {
+  display: none;
+}
+
+// Hits
+.zoom-articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  max-width: 1140px;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+ul.ais-Hits-list {
+  padding-inline-start: 0;
+}
+
+// Pagination
+.ais-Pagination {
+  margin: 1rem;
+  width: auto;
+
+  @include for-desktop-up {
+    margin: 3.75rem 2rem;
+  }
+}
+
+.ais-Pagination-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 .5rem;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.ais-Pagination-item {
+  align-items: center;
+  color: #3790f8;
+  font-size: 16px;
+  display: flex;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+
+  &--selected {
+    font-size: 12px;
+    border-radius: 50%;
+    color: white;
+    background-color: #3790f8;
+  }
+
+  &--previousPage {
+    @include pagination-button;
+    margin-right: .5rem;
+  }
+
+  &--nextPage {
+    @include pagination-button;
+    margin-left: .5rem;
+  }
+}

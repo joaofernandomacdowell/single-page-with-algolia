@@ -1,0 +1,40 @@
+.zoom-article-image {
+  &__wrapper {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  &__figure {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &__img {
+    max-width: 170%;
+    min-height: 100%;
+    transform: scale(1, 1);
+    transition: transform 0.25s ease-in-out;
+    width: auto;
+    will-change: transform;
+  }
+}
+
+.zoom-articles-container > div:first-child > a.zoom-article-image__wrapper {
+  @include for-desktop-up {
+    height: 100%;
+    max-width: 48%;
+  }
+}
+
+.zoom-articles-container > div:first-child > a.zoom-article-image__wrapper > figure > img {
+  @include for-desktop-up {
+    max-width: 235%;
+  }
+}

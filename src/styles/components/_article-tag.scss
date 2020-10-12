@@ -1,0 +1,12 @@
+.zoom-article-tag {
+  color: $blue;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  @include for-desktop-up {
+    display: block;
+  }
+}

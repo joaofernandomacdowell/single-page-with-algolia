@@ -1,0 +1,46 @@
+{
+  "name": "single-page",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-instantsearch-dom": "^6.7.0",
+    "react-scripts": "3.4.3",
+    "react-test-renderer": "^16.13.1",
+    "source-map-explorer": "^2.5.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "algoliasearch": "^4.5.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "lint": "eslint . --ext .js,.jsx",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll --verbose --coverage -u --setupFiles ./setupTests.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

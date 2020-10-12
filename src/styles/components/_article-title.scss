@@ -1,0 +1,15 @@
+.zoom-article-title {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  color: $dark-grey;
+  text-transform: none;
+  max-height: 100%;
+
+  @include for-desktop-up {
+    font-size: 22px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
