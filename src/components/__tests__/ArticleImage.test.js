@@ -23,10 +23,12 @@ describe('ArticleImage component', () => {
 
   test('have image with required props and values', () => {
     const image = wrapper.find('.zoom-article-image__img');
+    const { imageUrl, title } = mockApiResponse.hits[0];
+    const imageProps = image.props();
 
-    expect(image.props().src).toBe(mockApiResponse.hits[0].imageUrl);
-    expect(image.props().title).toBe(mockApiResponse.hits[0].title);
-    expect(image.props().alt).toBe(mockApiResponse.hits[0].title);
+    expect(imageProps.src).toBe(imageUrl);
+    expect(imageProps.title).toBe(title);
+    expect(imageProps.alt).toBe(title);
   });
 
   test('lazy loading is seted', () => {

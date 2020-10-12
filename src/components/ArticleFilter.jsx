@@ -25,14 +25,10 @@ export const ToggleButton = ({ isClosed, setClose }) => {
   );
 };
 
-const renderFilterOptions = (setAttribute) => (
-  <select onChange={(e) => setAttribute(e.target.value) }>
-    {FILTER_OPTIONS.map(option => (
-      <option key={option} value={option}>
-        {option}
-      </option>
-    ))}
-  </select>
+const renderOptions = (option) => (
+  <option key={option} value={option}>
+    {option}
+  </option>
 );
 
 const ArticleFilter = ({ isClosed, setClose }) => {
@@ -46,7 +42,12 @@ const ArticleFilter = ({ isClosed, setClose }) => {
       <ToggleButton isClosed={isClosed} setClose={setClose} />
       <div className={`${filterClass}${modifier}`}>
         <Panel header={attribute}>
-          {renderFilterOptions(setAttribute)}
+          <select onChange={(e) => {
+            e.preventDefault();
+            setAttribute(e.target.value);
+          }}>
+            {FILTER_OPTIONS.map(renderOptions)}
+          </select>
           <RefinementList attribute={attribute === 'tags' ? 'tags' : 'author.name'} />
         </Panel>
       </div>
