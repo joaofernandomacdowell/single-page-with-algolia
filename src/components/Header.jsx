@@ -9,8 +9,9 @@ const Header = (props) => {
         </a>
       </div>
       <div className="zoom-header__searchbox">
-        {props.children}
+        {props.children[0]}
       </div>
+      {props.children[1]}
     </div>
   );
 };

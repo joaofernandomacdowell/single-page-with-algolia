@@ -37,9 +37,9 @@ const Articles = () => {
       indexName="challenge_article_v2_items">
     <Header>
       <SearchBox translations={{ placeholder: 'Digite sua busca...'}} />
+      <ArticleFilter isClosed={isClosed} setClose={setClose} />
     </Header>
     <CustomHits />
-    <ArticleFilter isClosed={isClosed} setClose={setClose} />
     <Pagination
       showFirst={false}
     />
