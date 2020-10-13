@@ -6,10 +6,7 @@ import Articles from '../Articles';
 
 
 describe('Articles component', () => {
-  const props = {
-    title: mockApiResponse.hits[0].title
-  };
-  const wrapper = shallow(<Articles {...props} />);
+  const wrapper = shallow(<Articles />);
 
   test('match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();

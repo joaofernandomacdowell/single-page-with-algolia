@@ -15,9 +15,9 @@ describe('Header component', () => {
     expect(wrapper.find('.zoom-header__logo')).toHaveLength(1);
   });
 
-  test.skip('have searchbar', () => {
+  test('have searchbar', () => {
     const searchBoxContainer = wrapper.find('.zoom-header__searchbox');
 
-    expect(searchBoxContainer.find('.ais-SearchBox')).toHaveLength(1);
+    expect(searchBoxContainer).toHaveLength(1);
   });
 });

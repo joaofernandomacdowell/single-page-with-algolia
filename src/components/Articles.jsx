@@ -8,7 +8,6 @@ import {
 } from 'react-instantsearch-dom';
 
 import ArticleItem from './ArticleItem';
-import ArticleFilter from './ArticleFilter';
 import Header from './Header';
 
 
@@ -35,9 +34,8 @@ const Articles = () => {
     <InstantSearch
       searchClient={searchClient}
       indexName="challenge_article_v2_items">
-    <Header>
+    <Header isClosed={isClosed} setClose={setClose}>
       <SearchBox translations={{ placeholder: 'Digite sua busca...'}} />
-      <ArticleFilter isClosed={isClosed} setClose={setClose} />
     </Header>
     <CustomHits />
     <Pagination

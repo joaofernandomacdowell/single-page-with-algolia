@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ArticleFilter from './ArticleFilter'
+
 const Header = (props) => {
   return (
     <div className="zoom-header">
@@ -9,9 +11,12 @@ const Header = (props) => {
         </a>
       </div>
       <div className="zoom-header__searchbox">
-        {props.children[0]}
+        {props.children}
       </div>
-      {props.children[1]}
+      <ArticleFilter
+        isClosed={props.isClosed}
+        setClose={props.setClose}
+      />
     </div>
   );
 };
